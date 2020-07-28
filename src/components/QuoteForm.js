@@ -97,3 +97,20 @@ class QuoteForm extends Component {
 // in most modern version of React can just put the action in curly braces, don't need map dispatch to props
 // saying map addQuote to this component - now will have access to add quote through props object - so might need to update where calling
 export default connect(null, { addQuote })(QuoteForm);
+
+
+// can also do like this:
+
+// in handle submit:
+// this.props.addQuote(this.state);
+
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     addQuote: formData => dispatch({ type: 'ADD_QUOTE', payload: formData })
+//   };
+// };
+ 
+// export default connect(
+//   null,
+//   mapDispatchToProps
+// )(QuoteForm);
